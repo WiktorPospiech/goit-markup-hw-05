@@ -73,7 +73,7 @@ nav,
   letter-spacing: 0.03em;
 }
 .logo span {
-  color: #000000;
+  color: #000;
 }
 .menu {
   column-gap: 46px;
@@ -96,15 +96,7 @@ nav,
   line-height: 1.1;
   letter-spacing: 0.02em;
 }
-.active::after {
-  position: absolute;
-  right: 0;
-  margin-top: 37px;
-  content: "";
-  width: 100%;
-  border-bottom: solid 4px #2196f3;
-  border-radius: 4px;
-}
+.active::after,
 .bordered:hover::after {
   position: absolute;
   right: 0;
@@ -142,13 +134,10 @@ nav,
   padding-top: 0;
   padding-bottom: 0;
   background-color: var(--background-color);
-  border: 1px solid #000000;
-  box-shadow: 0 4px 4px 0 #00000040;
+  border: 1px solid #000;
 }
 .background-img {
   margin: auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-image: url(../images/sloganBackground.jpg),
     linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-position: center;
@@ -157,14 +146,9 @@ nav,
   max-width: 1600px;
 }
 .introduction-padding {
-  padding: 106px 0;
-  max-width: 696px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 200px 452px;
   text-align: center;
 }
-
 .slogan {
   font-size: 44px;
   font-weight: 900;
@@ -247,7 +231,6 @@ nav,
 .aboutus {
   background: #f5f4fa;
 }
-
 .aboutus-list h3 {
   font-weight: 500;
   color: var(--color-secondary);
@@ -284,6 +267,7 @@ nav,
 }
 .clients-list {
   display: flex;
+  justify-content: center;
   fill: #afb1b8;
   gap: 30px;
 }
@@ -316,7 +300,6 @@ nav,
 .portfolio-categories {
   justify-content: center;
 }
-
 .portfolio-categories button:focus,
 .portfolio-categories button:hover {
   background-color: var(--brand-color);
@@ -327,7 +310,6 @@ nav,
 .portfolio-item {
   display: block;
   border-bottom: 1px solid #eeeeee;
-  padding-bottom: 20px;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -342,6 +324,7 @@ nav,
 }
 .portfolio-img {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   padding-top: 50px;
@@ -351,13 +334,14 @@ nav,
   position: relative;
   overflow: hidden;
 }
-.card-description {
+.slide-out img {
   display: block;
-  margin: 0;
+}
+.card-description {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0px;
+  top: 0;
   bottom: 0;
   font-size: 18px;
   line-height: 28px;
@@ -368,12 +352,14 @@ nav,
   padding-right: 45px;
   color: var(--backrground-second-color);
   background-color: #2196f3e5;
-  transition-property: transform;
-  transform: translateY(100%);
+  transform: translateY(295px);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover .card-description {
   transform: translateY(0);
+}
+.caption {
+  padding: 20px 24px;
 }
 .caption h3 {
   font-weight: 700;
@@ -381,12 +367,11 @@ nav,
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-secondary);
-  padding-left: 24px;
+  margin-bottom: 4px;
 }
 .caption p {
   font-size: var(--paragraf-font-size);
   line-height: 1.9;
-  padding-left: 24px;
 }
 footer {
   background: var(--background-color);
@@ -453,9 +438,7 @@ address {
 .footer-socialmedia-icons h3 {
   color: var(--backrground-second-color);
 }
-
 /*modal*/
-
 .is-hidden {
   visibility: hidden;
   opacity: 0;
